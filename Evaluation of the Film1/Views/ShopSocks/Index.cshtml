@@ -1,0 +1,14 @@
+﻿@model ShopSocksViewModel
+
+<div class="container">
+	@foreach(var el in Model.shopsocks.listsocksitem)
+	{
+		<div class ="alert alert-warning mt-3">
+			<b>Носки:</b> @el.socks.Name<br/>
+			<b>Цена:</b> @el.socks.price.ToString("c")
+
+		</div>
+	}
+	<hr/>
+	<a class="btn btn-danger" asp-controller="Order" asp-action="Checkout">Оплатить</a>
+</div>

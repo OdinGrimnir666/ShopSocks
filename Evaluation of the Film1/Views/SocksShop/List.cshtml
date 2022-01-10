@@ -1,0 +1,10 @@
+﻿<h1> Все носки</h1>
+<h3>@Model.sockscategory</h3>
+<div class="row mt-4 mb-2">
+    @{
+        foreach (Socks socks in Model.getallsocks)
+        {
+            @Html.Partial("AllSocks",socks)
+        }
+    }
+</div>      

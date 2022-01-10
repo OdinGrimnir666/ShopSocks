@@ -1,0 +1,11 @@
+﻿@model Socks
+
+            <div class="col-lg-3">
+            <div class="imageSize">
+                 <img class="img-thumbnail " src="@Model.img" alt="@Model.Name" />
+                 <h2> @Model.Name</h2>
+                 <p>@Model.shortDesc</p>
+                 <p>Цена:@Model.price.ToString("c")</p> 
+                 <p><a class="btn btn-warning" asp-controller="ShopSocks"  asp-action="addtosocks" asp-route-id="@Model.Id">Добавить в корзину</a></p>
+            </div>
+            </div>
